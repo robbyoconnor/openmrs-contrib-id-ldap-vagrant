@@ -1,12 +1,12 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-VERSION = 2 # DO NOT CHANGE THIS!
+VERSION = 2 # DO NOT CHANGE THIS UNLESS YOU KNOW WHAT YOU ARE DOING.
 Vagrant.configure(VERSION) do |config|
 
   config.vm.box = 'https://oss-binaries.phusionpassenger.com/vagrant/boxes/latest/ubuntu-14.04-amd64-vbox.box'
 
-  config.vm.network 'forwarded_port', guest: 389, host: 389
+  config.vm.network 'forwarded_port', guest: 389, host: 1389
 
   config.vm.network 'private_network', ip: '192.168.33.10'
 
